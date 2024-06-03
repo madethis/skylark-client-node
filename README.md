@@ -1,8 +1,10 @@
-# Skylark Live Client
+# Skylark LIVE Client
 
 **Warning: This is very much work in progress**
 
-This is a client for the Skylark Live GraphQL API, used as a CLI tool or library for interacting with the API. Currently only a very few features and CLI commands exists.
+This is a client for the Skylark LIVE GraphQL API, used as a CLI tool or library for interacting with the API.
+
+Currently only a very few features and CLI commands exists.
 
 ## Installation
 
