@@ -11,5 +11,18 @@
     "url": "github.com:madethis/skylark-client-node"
   },
   "author": "Made This ApS",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module",
+  "exports": "./index.js",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "bin": {
+    "skylark": "./cli.js"
+  }
 }
