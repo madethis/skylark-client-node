@@ -87,20 +87,24 @@ export class Device {
           before: before.toISOString(),
         };
 
-        const data = await this.client.request(document, variables);
-        const page = data?.device?.readingSeriesById?.values;
+        if (after.getTime() > new Date().getTime()) {
+          done = true;
+        } else {
+          const data = await this.client.request(document, variables);
+          const page = data?.device?.readingSeriesById?.values;
 
-        if (page) {
-          cursor = new Date(page.pageInfo.endCursor);
-          for (const value of page.nodes) {
-            yield value;
-          }
+          if (page) {
+            cursor = new Date(page.pageInfo.endCursor);
+            for (const value of page.nodes) {
+              yield value;
+            }
 
-          if (page.nodes.length < 1000) {
+            if (page.nodes.length < 1000) {
+              done = true;
+            }
+          } else {
             done = true;
           }
-        } else {
-          done = true;
         }
       }
     }
