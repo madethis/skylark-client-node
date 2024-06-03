@@ -20,9 +20,4 @@ export async function test(argv) {
   }
 
   console.log("All good! You are authenticated as", name);
-
-  const device = client.device("0000-2022-0109-2210");
-
-  const title = await device.title();
-  console.log("Device title:", title);
 }
