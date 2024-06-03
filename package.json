@@ -20,9 +20,19 @@
   },
   "files": [
     "index.js",
-    "cli.js"
+    "cli.js",
+    "src"
   ],
   "bin": {
     "skylark": "./cli.js"
+  },
+  "dependencies": {
+    "graphql": "^16.8.1",
+    "graphql-request": "^7.0.1",
+    "read-last-lines": "^1.8.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.0"
   }
 }
